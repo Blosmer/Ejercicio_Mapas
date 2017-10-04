@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorBlack">
+
+    <LinearLayout
+        android:id="@+id/linearL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            map:uiZoomControls="true">
+
+            <Button
+                android:id="@+id/btnDetalles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="10sp"
+                android:layout_marginLeft="10sp"
+                android:text="Distancia" />
+
+            <Button
+                android:id="@+id/btnAnterior"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|bottom"
+                android:layout_marginLeft="10sp"
+                android:layout_marginBottom="10sp"
+                android:text="@string/btnAnterior"
+                android:textSize="16sp"
+                android:maxHeight="20sp"/>
+
+            <Button
+                android:id="@+id/btnSiguiente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="80sp"
+                android:layout_marginBottom="10sp"
+                android:text="@string/btnNext"
+                android:textSize="16sp"
+                android:maxHeight="20sp" />
+
+        </fragment>
+
+
+        <TextView
+            android:id="@+id/distancia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="10sp"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            android:text="Si ves esto, no funciono" />
+
+    </LinearLayout>
+</RelativeLayout>
